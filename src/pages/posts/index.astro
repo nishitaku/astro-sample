@@ -22,7 +22,7 @@ const postsWithDate: PostWithDate[]  = posts.map(post => {
   <h1>Post一覧</h1>
   <ul>
     {postsWithDate.map(post => (
-      <li>{post.title} {post.date.toISOString()}</li>
+      <li><a href={`/posts/${post.id}`}>{post.title} {post.date.toISOString()}</a></li>
     ))}
   </ul>
 </Layout>
