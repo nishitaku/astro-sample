@@ -1,6 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+console.log('server');
+const message = 'Click!!';
 ---
+
 <Layout title="Aboutページ">
   <h1>Astroについて</h1>
+  <div>
+    <button id="btn">click</button>
+  </div>
 </Layout>
+
+<script define:vars={{ message }}>
+  console.log('client');
+  document.getElementById('btn').addEventListener('click', () => {
+    alert(message);
+  });
+</script>
