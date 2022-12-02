@@ -1,5 +1,6 @@
 ---
 import Counter from '../components/Counter';
+import CounterVue from '../components/CounterVue.vue';
 import Layout from '../layouts/Layout.astro';
 console.log('server');
 const message = 'Click!!';
@@ -11,6 +12,7 @@ const message = 'Click!!';
     <button id="btn">click</button>
   </div>
   <Counter client:load></Counter>
+  <CounterVue client:load></CounterVue>
 </Layout>
 
 <script define:vars={{ message }}>
